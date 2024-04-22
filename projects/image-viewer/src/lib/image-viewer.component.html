@@ -1,0 +1,24 @@
+<div [toggleFullscreen]="false" class="image-container" #ImgConatainer>
+    <img src="https://www.ajot.com/images/uploads/article/SKYVISION_foto.jpg" alt="No image Found" draggable="false" (wheel)="zoomOnScroll($event)" [style.transform]="zoomValue" [style.rotate]="rotateVal">
+    <div class="action-btns-container">
+        <!-- <button class="action-btn" (click)="zoomOnClick('out')" title="Rotate Anti-Clockwise"> 
+            <img src="../../assets/icons/zoom-out.svg" >
+        </button>
+        <button class="action-btn" (click)="zoomOnClick('out')" title="Rotate Anti-Clockwise"> 
+            <img src="../../assets/icons/zoom-out.svg" >
+        </button> -->
+        <button class="action-btn" (click)="zoomOnClick('out')" title="Zoom Out" [disabled]="isZoomOutEnabled"> 
+            <img src="../../assets/icons/zoom-out.svg" >
+        </button>
+        <button class="action-btn" (click)="zoomOnClick('in')" title="Zoom In"> 
+            <img src="../../assets/icons/zoom-in.svg" >
+        </button>
+        <button class="action-btn" (click)="rotateImage('ac')" title="Rotate Anti-Clockwise"> 
+            <img src="../../assets/icons/rotate_anticlockwise.svg" >
+        </button>
+        <button class="action-btn" (click)="rotateImage('c')" title="Rotate Clockwise"> 
+            <img src="../../assets/icons/rotate_clockwise.svg" >
+        </button>
+        <button class="reset-btn" (click)="resetValues()" title="Reset">RESET</button>
+    </div>
+</div>
